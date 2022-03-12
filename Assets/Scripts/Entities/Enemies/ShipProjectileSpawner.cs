@@ -31,7 +31,7 @@ public class ShipProjectileSpawner : MonoBehaviour
         // Debugging firing pattern
         // Firing pattern mapping: firedObjects[5 items][number of waves]
         phase1 = new List<int[]>() {
-            new int[] {0, 0, 0, 1, 1}, 
+            new int[] {1, 2, 1, 2, 1}, 
             new int[] {0, 0, 1, 1, 0},
             new int[] {0, 1, 1, 0, 0},
             new int[] {1, 1, 0, 0, 0},

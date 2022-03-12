@@ -5,7 +5,7 @@ using UnityEngine;
 public class ShipProjectileController : EnemyController
 {
     public float speed;
-    
+    public float acceleration;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +20,7 @@ public class ShipProjectileController : EnemyController
 
     // Moves cannon to the left at a constant rate in a straight line
     public override Vector2 GetMove() {
+        speed += acceleration;
         return (Vector2) transform.position + (new Vector2(-1, 0) * speed);
     }
 }

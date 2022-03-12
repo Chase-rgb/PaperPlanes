@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CannonballController : EnemyController
 {
+    public float acceleration;
     public float speed;
 
     // Start is called before the first frame update
@@ -20,6 +21,7 @@ public class CannonballController : EnemyController
 
     // Moves cannon to the left at a constant rate in a straight line
     public override Vector2 GetMove() {
+        speed += acceleration;
         return (Vector2) transform.position + (new Vector2(-1, 0) * speed);
     }
 }
